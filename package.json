@@ -4,7 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "lint": "eslint '**/*.js'",
+    "dev": "nodemon",
+    "test": "jest --coverage --verbose",
+    "jsdoc": "jsdoc -c ./docs/config/jsdoc.config.json",
+    "test-watch": "jest --watchAll --verbose --coverage"
   },
   "repository": {
     "type": "git",
@@ -27,5 +32,8 @@
     "mongoose": "^5.9.18",
     "morgan": "^1.10.0",
     "supertest": "^4.0.2"
+  },
+  "devDependencies": {
+    "jsdoc": "^3.6.4"
   }
 }
