@@ -1,6 +1,7 @@
 'use strict';
 const express = require('express');
 const router = express.Router();
+const users = require('../src/auth/models/users-model.js');
 const getModel = require('../middleware/params.js');
 const acl = require('../src/auth/middleware/acl.js');
 const bearer = require('../src/auth/middleware/bearer.js');
