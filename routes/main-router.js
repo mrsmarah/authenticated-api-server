@@ -13,11 +13,11 @@ router.get('/users', basic ,basicHandler);
 
 router.param('model', getModel);
 
-router.post('/:model',bearer,acl('create'), postHandler);
-router.get('/:model',bearer,acl('read'), getAllHandler);
-router.get('/:model/:_id',bearer,acl('read'), getOneHandler);
-router.put('/:model/:_id',bearer,acl('update'), updateHandler);
-router.delete('/:model/:_id',bearer,acl('delete'), deleteHandler);
+router.post('/api/v1/:model',bearer,acl('create'), postHandler);
+router.get('/api/v1/:model',bearer,acl('read'), getAllHandler);
+router.get('/api/v1/:model/:_id',bearer,acl('read'), getOneHandler);
+router.put('/api/v1/:model/:_id',bearer,acl('update'), updateHandler);
+router.delete('/api/v1/:model/:_id',bearer,acl('delete'), deleteHandler);
 
 
 
